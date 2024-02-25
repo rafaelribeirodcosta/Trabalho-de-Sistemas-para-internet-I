@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="estilo_loja.css">
+    <link rel="shortcut icon" href="imagens/mario_icone.jpg" type="image/x-icon">
+    <title>Loja do Mario</title>
+</head>
+<body>
+
+    <header>
+        <h1>LOJA DO MARIO</h1>
+        <img src="imagens/mario_icone.jpg" alt="Icone do Mario" id="logo"><br>
+        <span id="autor"><small>Por: Rafael Ribeiro</small></span>
+    </header>
+
+
+    <div class="container">
+
+        <div id="pagamento">Metódos de pagamento: 
+            <input type="radio" name="pagamento"  value="pix">Pix 
+            <input type="radio"  name="pagamento" value="cartao">Cartão
+
+            <div id="metodo_pix"> 
+                <form id="pagar_pix">
+                    Nome: <input type="text" name="nome"  id="nome" placeholder="Nome"  minlength="3" maxlength="30"> <br>
+                    CPF : <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" size="14"><br>
+                    <input type="submit" value="Concluir Pagamento" id="conclui" >
+                    
+                </form>
+               
+            </div>
+
+            <div id="metodo_cartao">
+                <form id="pagar_cartao">
+                    <div id="cartao_credito">
+                        Número do cartão  &nbsp; <input type="text" name="num_cartao" id="num_cartao" placeholder="0000 0000 0000 0000" maxlength="19"> 
+                        <div id="cartao_visa"> <img src="imagens/cartoes/bandeira_visa.png" alt="bandeira_visa" class="cartao"></div><br>
+                        <div id="cartao_master"><img src="imagens/cartoes/bandeira_master.png" alt="bandeira_master" class="cartao"></div>
+                    </div>
+                     
+                    Nome impresso no cartão <input type="text" name="nome_titular" id="nome_titular" placeholder="Nome" minlength="3"><br>
+                    Validade : <input type="text" name="mes" id="mes" size="2" maxlength="2" placeholder="MM">&nbsp; <input type="text" name="ano" id="ano" placeholder="YY" size="4" maxlength="4"> <br>
+                    CVV <input type="text" name="cvv" id="cvv" size="3" maxlength="3" placeholder="CVV"><br>
+                    Parcelamento <select name="parcelados" id="parcelamento"></select><br>
+                    <input type="submit" value="Concluir pagamento" id="conclui_cartao">
+
+                </form>
+            </div>
+
+
+        </div>
+        
+        
+        
+        
+        
+        
+
+       
+        <div class="produto">
+            <img class="retro"  src="imagens/produtos/super mario 64.jpg" alt="Super Mario 64">
+             <p>Super Mario 64</p> <br>
+             <p id="valor1">Valor: R$80.00</p><br>  
+             <button id="comprar1" onclick="pegar_valor(valor1)">Comprar</button>
+        </div>
+       
+       
+        <div class="produto">
+            <img class="retro"  src="imagens/produtos/super mario kart classico.jpg" alt="Super Mario Kart Clássico"> 
+            <p>Super Mario Kart para SNES</p> <br> 
+            <p id="valor2">Valor: R$25.00</p> <br> 
+            <button id="comprar2" onclick="pegar_valor(valor2)">Comprar</button>
+        </div>
+
+
+        <div class="produto">
+             <img class="retro"  src="imagens/produtos/Super_Mario_World_2_Yoshis_Island_capa.jpg" alt="Super Mario World 2"> 
+             <p>Super Mario World 2 Yoshi Island para SNES</p> <br> 
+             <p id="valor3">Valor: R$50.00</p> <br>
+             <button class="comprar3" onclick="pegar_valor(valor3)">Comprar</button>
+        </div>
+
+        
+        <div class="produto"> 
+            <img class="retro" src="imagens/produtos/super mario world.jpg" alt="Super Mario World">          
+             <p>Super Mario World</p> <br>
+             <p id="valor4">Valor:R$10.00</p> <br>
+             <button id="comprar4" onclick="pegar_valor(valor4)">Comprar</button>
+        </div>
+        
+
+
+
+        <div class="produto">
+            <img class="retro"  src="imagens/produtos/super mario rpg.jpg" alt="Super Mario RPG">          
+            <p>Super Mario RPG</p> <br> 
+            <p id="valor5">Valor:R$35.00</p> <br>
+            <button id="comprar5" onclick="pegar_valor(valor5)">Comprar</button>
+        </div>
+        
+
+        <div class="produto">
+            <img class="retro"  src="imagens/produtos/Super Mario Bros wii.jpg" alt="Super Mario Bros Wii">       
+            <p>Super Mario Bros Wii</p> <br> 
+            <p id="valor6">Valor:R$150.00</p> <br>
+            <button id="comprar6" onclick="pegar_valor(valor6)">Comprar</button>
+        </div>
+    
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
